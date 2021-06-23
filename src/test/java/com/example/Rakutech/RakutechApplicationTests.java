@@ -1,4 +1,4 @@
-package com.example.Rakutech;
+package com.example.rakutech;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
