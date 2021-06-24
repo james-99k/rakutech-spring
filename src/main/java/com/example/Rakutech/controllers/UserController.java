@@ -1,7 +1,7 @@
-package com.example.Rakutech.controller;
+package com.example.rakutech.controllers;
 
-import com.example.Rakutech.model.User;
-import com.example.Rakutech.repository.UserRepository;
+//import com.example.rakutech.models.User;
+import com.example.rakutech.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,11 +15,11 @@ import java.util.List;
 @RequestMapping("api/")
 public class UserController {
 
-    @Autowired
-    private UserRepository userRepository;
+//    @Autowired
+//    private UserRepository userRepository;
 
-    @GetMapping("users")
-    public List<User> getUsers() {
-        return this.userRepository.findAll();
-    }
+//    @GetMapping("users")
+//    public List<User> getUsers() {
+//        return this.userRepository.findAll();
+//    }
 }
