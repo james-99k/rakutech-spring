@@ -1,4 +1,4 @@
-package com.example.rakutech;
+package com.example.Rakutech;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

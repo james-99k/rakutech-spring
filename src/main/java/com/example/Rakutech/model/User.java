@@ -1,4 +1,4 @@
-package com.example.rakutech.model;
+package com.example.Rakutech.model;
 
 import javax.persistence.*;
 

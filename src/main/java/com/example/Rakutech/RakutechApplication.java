@@ -1,7 +1,7 @@
-package com.example.rakutech;
+package com.example.Rakutech;
 
-import com.example.rakutech.model.User;
-import com.example.rakutech.repository.UserRepository;
+import com.example.Rakutech.model.User;
+import com.example.Rakutech.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
