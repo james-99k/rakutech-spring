@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="signin.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <title>Sign in Page</title>
+</head>
+
+<body>
+
+<section>
+    <div class="wallpaper">
+        <div class="container">
+            <div class="container__left">
+                <div class="container__left--title" onclick="location.href='index.html'">
+                    <h1 class="logo-white">
+                        RAKU
+                    </h1>
+                    <h1 class="logo-red">
+                        TECH
+                    </h1>
+                </div>
+                <div class="container__left--design">
+                    <div class="line"></div>
+                </div>
+                <div class="container__left--text">
+                    Browse from over 500 devices in your area.
+                </div>
+            </div>
+
+            <div class="container__right">
+                <div class="container__right--title">
+                    <h1>Sign In</h1>
+                </div>
+                <button class="container__right--apple" onclick="parent.open('https://secure4.store.apple.com/ph/shop/signIn/account?r=SCC4YFC7DYCDFX9CJJ9PX4UHP22XDDY4F&s=aHR0cHM6Ly9zZWN1cmU0LnN0b3JlLmFwcGxlLmNvbS9waC9zaG9wL2FjY291bnQvc2V0dXAvc3RhcnR8MWFvczgwYWNhNDljYmYyMjFkZGI1Njk5ZWU3YjVmYmY4NThjZWE1NTRmZWU')">
+                    <i class="fab fa-apple"></i>
+                    SIGN IN WITH APPLE
+                </button>
+                <button class="container__right--facebook" onclick="parent.open('https://www.facebook.com')">
+                    <i class="fab fa-facebook-f"></i>
+                    SIGN IN WITH FACEBOOK
+                </button>
+                <div class="container__right--or">
+                    <div class="line"></div> or <div class="line"></div>
+                </div>
+                <form action="">
+                    <div class="email">
+                        <span>Email</span>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="password">
+                        <span>Password</span>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    <button class="signin-btn" id="signin-btn">
+                        <span>SIGN IN</span>
+                    </button>
+                </form>
+
+                <div class="container__right--terms">
+                    <p>By continuing, you agree to accept</p>
+                    <p>our Privacy Policy & Terms of Service.</p>
+                </div>
+                <div class="container__right--signup">
+                    Don't have an account?
+                    <a href="signup.html">Create new account</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<script src="script-sign-in.js"></script>
+</body>
+
+</html>
