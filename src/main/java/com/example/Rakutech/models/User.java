@@ -9,10 +9,14 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String firstName;
-    private String lastName;
-    @Column(unique = true)
+
+    @Column(nullable = false, unique = true, length = 45)
     private String email;
+
+    @Column(name = "full_name", nullable = false, unique = true, length = 50)
+    private String fullName;
+
+    @Column(nullable = false, length = 65)
     private String password;
 
     //getter setters
@@ -25,20 +29,12 @@ public class User {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setFullName(String firstName) {
+        this.fullName = firstName;
     }
 
     public String getEmail() {

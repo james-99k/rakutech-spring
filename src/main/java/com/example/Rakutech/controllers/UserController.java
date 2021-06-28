@@ -4,23 +4,29 @@ import com.example.rakutech.models.User;
 import com.example.rakutech.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class UserController {
 
-    @RequestMapping("/signup")
-    public String signup() {
+    @GetMapping("")
+    public String viewHomePage() {
+        return "index";
+    }
 
-        System.out.println("Sign Up");
-        return ("signup.html");
+    @RequestMapping("/signup")
+    public String signup(Model model) {
+        model.addAttribute("user", new User());
+
+        return "signup";
     }
 
     @RequestMapping("/signin")
-    public String signin() {
+        public String signin() {
 
         System.out.println("Sign In");
-        return ("signin.html");
+        return "signin";
     }
 
     @Autowired
@@ -28,11 +34,10 @@ public class UserController {
 
     @PostMapping(path = "/add")
     public @ResponseBody
-    String addNewUser(@RequestParam String firstName, @RequestParam String lastName, @RequestParam String email) {
+    String addNewUser(@RequestParam String fullName, @RequestParam String email) {
 
         User user = new User();
-        user.setFirstName(firstName);
-        user.setLastName(lastName);
+        user.setFullName(fullName);
         user.setEmail(email);
         userRepository.save(user);
         return "User Created";

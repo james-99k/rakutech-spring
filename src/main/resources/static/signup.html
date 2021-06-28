@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -38,7 +38,8 @@
                 </div>
                 <div class="container__right--signin">
                     Already have an account?
-                    <a href="signin.html">Log in</a>
+                    <a th:href="/@{/signin}">Log in</a>
+<!--                    <a href="signin.html">Log in</a>-->
                 </div>
                 <form action="/" method="GET" id="form">
                     <div class="fullname">

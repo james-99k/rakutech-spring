@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -70,7 +70,8 @@
                 </div>
                 <div class="container__right--signup">
                     Don't have an account?
-                    <a href="signup.html">Create new account</a>
+                    <a th:href="@{/signup}">Create new account</a>
+<!--                    <a href="signup.html">Create new account</a>-->
                 </div>
             </div>
         </div>

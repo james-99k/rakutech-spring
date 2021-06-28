@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -64,9 +64,10 @@
             </ul>
         </div>
         <div class="main__right">
-            <button class="main__right--profile" onclick="location.href='signin.html'">
-                <i class="fas fa-user"></i> Sign in
-            </button>
+            <a href="/signin" th:href="/@{/signin}"><i class="fas fa-user"></i> Sign in</a>
+<!--            <button class="main__right&#45;&#45;profile" onclick="location.href='signin.html'">-->
+<!--                <i class="fas fa-user"></i> Sign in-->
+<!--            </button>-->
             <button class="main__right--cart" onclick="location.href='checkout-page.html'">
                 <i class="fas fa-shopping-basket"></i>
                 <input class="main__right--cart-count" type="number" value="0" disabled>

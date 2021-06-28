@@ -1519,6 +1519,10 @@
   width: 100%;
 }
 
+.container__left--title:hover{
+  cursor: pointer;
+}
+
 .container__left--title .logo-white {
   color: #FFFFFF;
 }
