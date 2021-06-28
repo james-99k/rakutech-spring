@@ -4,26 +4,20 @@ import com.example.rakutech.models.User;
 import com.example.rakutech.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class UserController {
 
-    @GetMapping("")
-    public String viewHomePage() {
-        return "index";
-    }
-
     @RequestMapping("/signup")
-    public String signup(Model model) {
-        model.addAttribute("user", new User());
+    public String signup() {
 
-        return "signup";
+        System.out.println("Sign Up");
+        return ("signup.html");
     }
 
     @RequestMapping("/signin")
-        public String signin() {
+    public String signin() {
 
         System.out.println("Sign In");
         return "signin";
