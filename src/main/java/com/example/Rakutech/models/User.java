@@ -3,7 +3,7 @@ package com.example.rakutech.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 public class User {
 
     @Id
@@ -13,13 +13,8 @@ public class User {
     @Column(nullable = false, unique = true, length = 45)
     private String email;
 
-    @Column(name = "full_name", nullable = false, unique = true, length = 50)
-    private String fullName;
-
-    @Column(nullable = false, length = 65)
+    @Column(nullable = false, length = 64)
     private String password;
-
-    //getter setters
 
     public Long getId() {
         return id;
@@ -27,14 +22,6 @@ public class User {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public void setFullName(String firstName) {
-        this.fullName = firstName;
     }
 
     public String getEmail() {
@@ -52,4 +39,15 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    @Column(name = "full_name", nullable = false, length = 50)
+    private String fullName;
 }

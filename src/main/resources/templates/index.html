@@ -1,19 +1,801 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <meta charset="ISO-8859-1">
-    <title>Welcome to CodeJava Home</title>
-    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
-    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+  <title>RAKUTECH</title>
 </head>
+
 <body>
-<div class="container text-center">
-    <h1>Welcome to CodeJava.net</h1>
-    <h3><a th:href="/@{/users}">List of Users</a></h3>
-    <h3><a th:href="/@{/register}">Register</a></h3>
-    <h3><a th:href="/@{/login}">Login</a></h3>
+
+<!-- newsletter -->
+<section>
+  <div class="newsletter_container">
+    <div class="newsletter">
+      <div class="close_btn">
+        <button class="btn_close" onclick="document.querySelector('.newsletter_container').style.visibility='hidden'" >X</button>
+      </div>
+      <div class="form_side">
+        <h2>Newsletter</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Labore esse ab explicabo asperiores accusantium eligendi ipsam repellat quibusdam.</p>
+        <div class="email_box">
+          <input type="text" placeholder="Email" name="search" class="page_search_box">
+          <button type="submit" class="search_button">Subscribe</i></button>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" class="checkbox">
+          <p>Don't show this popup again</p>
+        </div>
+      </div>
+      <div class="image_side">
+        <img src="Images/newsletter-img.png" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- main tab -->
+<section>
+  <div class="main">
+    <div class="main__left">
+      <ul class="main__left--menu">
+        <li class="dropdown__options"><a href='#' class="dropdown language">EN <i
+                class="fas fa-caret-down"></i></a>
+          <ul>
+            <li class="dropdown__options--tab"><a href='#'>JP</a></li>
+            <li class="dropdown__options--tab"><a href='#'>PH</a></li>
+          </ul>
+        </li>
+        <li class="dropdown__options"><a href='#' class="dropdown currency">USD <i
+                class="fas fa-caret-down"></i></a>
+          <ul>
+            <li class="dropdown__options--tab"><a href='#'>JPY</a></li>
+            <li class="dropdown__options--tab"><a href='#'>PHP</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="main__right">
+<!--      <a href="/signin" th:href="/@{/signin}"><i class="fas fa-user"></i> Sign in</a>-->
+                  <button class="main__right--profile" onclick="location.href='signin.html'">
+                      <i class="fas fa-user"></i> Sign in
+                  </button>
+      <button class="main__right--cart" onclick="location.href='checkout-page.html'">
+        <i class="fas fa-shopping-basket"></i>
+        <input class="main__right--cart-count" type="number" value="0" disabled>
+        <span>Items</span>
+      </button>
+      <span class="main__right--total">
+                    <span>$</span>
+                    <input class="total__main" type="number" value="0" disabled>
+                </span>
+      <button class="main__right--search">
+        <i class="fas fa-search"></i>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<!-- logo -->
+<section>
+  <div class="logo">
+    <h1 class="logo__black">
+      RAKU
+    </h1>
+    <h1 class="logo__red">
+      TECH
+    </h1>
+  </div>
+</section>
+
+<!-- Navigation tab -->
+<section>
+  <div class="nav">
+    <ul class="nav__links">
+      <li class="nav__links--home">
+        <a href="index.html">HOME</a>
+        <div class="mega-box">
+          <div class="mega-box__content">
+            <div class="mega-box__content--column">
+              <header>Category</header>
+              <ul class="links">
+                <li><a href="#">Airport & Wireless</a></li>
+                <li><a href="#">AppleCare</a></li>
+                <li><a href="#">Bags, Shells & Sleeves</a></li>
+                <li><a href="#">Business & Security</a></li>
+                <li><a href="#">Cables & Docks</a></li>
+              </ul>
+            </div>
+            <div class="mega-box__content--column">
+              <header> </header>
+              <ul class="links">
+                <li><a href="#">Cameras & Video</a></li>
+                <li><a href="#">Car & Travel</a></li>
+                <li><a href="#">Cases & Films</a></li>
+                <li><a href="#">Business & Security</a></li>
+                <li><a href="#">Cables & Docks</a></li>
+              </ul>
+            </div>
+            <div class="mega-box__content--column">
+              <header>Category</header>
+              <ul class="links">
+                <li><a href="#">Chargin Devices</a></li>
+                <li><a href="#">Connected Home</a></li>
+                <li><a href="#">Device Care</a></li>
+                <li><a href="#">Display & Graphics</a></li>
+                <li><a href="#">Fitness & Sport</a></li>
+              </ul>
+            </div>
+            <div class="mega-box__content--column">
+              <header> </header>
+              <ul class="links">
+                <li><a href="#">Headphones</a></li>
+                <li><a href="#">HealthKit</a></li>
+              </ul>
+            </div>
+            <div class="mega-box__content--column">
+              <header>Category</header>
+              <ul class="links">
+                <li><a href="#">Mice & Keyboard</a></li>
+                <li><a href="#">Music Creation</a></li>
+                <li><a href="#">Networking & Server</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="#">STORE</a></li>
+      <li><a href="#">IPHONE</a></li>
+      <li><a href="#">IPAD</a></li>
+      <li><a href="#">MACBOOK</a></li>
+      <li><a href="accessories-page.html">ACCESSORIES</a></li>
+    </ul>
+
+  </div>
+</section>
+
+<!-- ------------------------------------------------------------------------ -->
+
+<!-- main banner  -->
+<section>
+  <div class="main-banner">
+    <button class="main-banner__arrow">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <div class="main-banner__content">
+      <div class="main-banner__content--details">
+        <div class="details details__title">
+          iPhone X
+        </div>
+        <div class="details details__description">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+          the industry's standard dummy.
+        </div>
+        <div class="details details__link">
+          <a href="$">MORE</a>
+        </div>
+      </div>
+      <div class="main-banner__content--image">
+        <img src="Images/iphone1.png" alt="" class="image">
+      </div>
+    </div>
+    <button class="main-banner__arrow">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+</section>
+
+<!-- advertisement -->
+<section>
+  <div class="advertisement">
+    <div class="advertisement__column">
+      <div class="advertisement__column--1">
+        <div class="title">
+          iPhone 6
+        </div>
+        <div class="details">
+          Lorem Ipsum dolor sit amet, consectetur adipiscing elit, labor
+        </div>
+        <div class="price">
+          $399
+        </div>
+      </div>
+      <div class="advertisement__column--2">
+        <img src="Images/Oculus-Rift.png" alt="" class="image">
+        <div class="row">
+          <div class="row__title">
+            Oculus Rift
+          </div>
+          <div class="row__price">
+            $349
+          </div>
+        </div>
+      </div>
+      <div class="advertisement__column--3">
+        <div class="content">
+          <div class="content__title">
+            GoPro Hero 6
+          </div>
+          <div class="content__details">
+            Lorem Ipsum dolor sit amet, consectetur adipiscing elit, labor
+          </div>
+          <div class="content__price">
+            $299
+          </div>
+        </div>
+        <div class="image">
+          <img src="Images/goPro.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- best seller & product navigation -->
+<section>
+  <div class="best-seller">
+    <h1>BEST SELLER</h1>
+  </div>
+  <nav class="prod-nav">
+    <ul class="prod-nav__links">
+      <li><a href="#">All</a></li>
+      <li><a href="#">Mac</a></li>
+      <li><a href="#">iPhone</a></li>
+      <li><a href="#">iPad</a></li>
+      <li><a href="#">iPod</a></li>
+      <li><a href="#">Accessories</a></li>
+    </ul>
+  </nav>
+</section>
+
+<!-- products -->
+
+<section>
+  <div class="product">
+    <div class="product__row">
+      <div class="card" onclick="location.href='product-page.html'">
+        <div class="card__image">
+          <i class="far fa-heart heart"></i>
+          <i class="fas fa-shopping-cart cart"></i>
+        </div>
+        <div class="card__title">
+          Apple Macbook Pro
+        </div>
+        <div class="card__rating">
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--gray"></i>
+        </div>
+        <div class="card__price">
+          <div class="card__price--discounted">
+            $499
+          </div>
+          <div class="card__price--original">
+            $599
+          </div>
+        </div>
+      </div>
+      <div class="card" onclick="location.href='product-page.html'">
+        <div class="card__image">
+          <i class="far fa-heart heart"></i>
+          <i class="fas fa-shopping-cart cart"></i>
+        </div>
+        <div class="card__title">
+          Apple Macbook Pro
+        </div>
+        <div class="card__rating">
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--gray"></i>
+        </div>
+        <div class="card__price">
+          <div class="card__price--discounted">
+            $499
+          </div>
+          <div class="card__price--original">
+            $599
+          </div>
+        </div>
+      </div>
+      <div class="card" onclick="location.href='product-page.html'">
+        <div class="card__image">
+          <i class="far fa-heart heart"></i>
+          <i class="fas fa-shopping-cart cart"></i>
+        </div>
+        <div class="card__title">
+          Apple Macbook Pro
+        </div>
+        <div class="card__rating">
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--gray"></i>
+        </div>
+        <div class="card__price">
+          <div class="card__price--discounted">
+            $499
+          </div>
+          <div class="card__price--original">
+            $599
+          </div>
+        </div>
+      </div>
+      <div class="card" onclick="location.href='product-page.html'">
+        <div class="card__image">
+          <i class="far fa-heart heart"></i>
+          <i class="fas fa-shopping-cart cart"></i>
+        </div>
+        <div class="card__title">
+          Apple Macbook Pro
+        </div>
+        <div class="card__rating">
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--gray"></i>
+        </div>
+        <div class="card__price">
+          <div class="card__price--discounted">
+            $499
+          </div>
+          <div class="card__price--original">
+            $599
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product__row">
+      <div class="card" onclick="location.href='product-page.html'">
+        <div class="card__image">
+          <i class="far fa-heart heart"></i>
+          <i class="fas fa-shopping-cart cart"></i>
+        </div>
+        <div class="card__title">
+          Apple Macbook Pro
+        </div>
+        <div class="card__rating">
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--gray"></i>
+        </div>
+        <div class="card__price">
+          <div class="card__price--discounted">
+            $499
+          </div>
+          <div class="card__price--original">
+            $599
+          </div>
+        </div>
+      </div>
+      <div class="card" onclick="location.href='product-page.html'">
+        <div class="card__image">
+          <i class="far fa-heart heart"></i>
+          <i class="fas fa-shopping-cart cart"></i>
+        </div>
+        <div class="card__title">
+          Apple Macbook Pro
+        </div>
+        <div class="card__rating">
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--gray"></i>
+        </div>
+        <div class="card__price">
+          <div class="card__price--discounted">
+            $499
+          </div>
+          <div class="card__price--original">
+            $599
+          </div>
+        </div>
+      </div>
+      <div class="card" onclick="location.href='product-page.html'">
+        <div class="card__image">
+          <i class="far fa-heart heart"></i>
+          <i class="fas fa-shopping-cart cart"></i>
+        </div>
+        <div class="card__title">
+          Apple Macbook Pro
+        </div>
+        <div class="card__rating">
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--gray"></i>
+        </div>
+        <div class="card__price">
+          <div class="card__price--discounted">
+            $499
+          </div>
+          <div class="card__price--original">
+            $599
+          </div>
+        </div>
+      </div>
+      <div class="card" onclick="location.href='product-page.html'">
+        <div class="card__image">
+          <i class="far fa-heart heart"></i>
+          <i class="fas fa-shopping-cart cart"></i>
+        </div>
+        <div class="card__title">
+          Apple Macbook Pro
+        </div>
+        <div class="card__rating">
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--gray"></i>
+        </div>
+        <div class="card__price">
+          <div class="card__price--discounted">
+            $499
+          </div>
+          <div class="card__price--original">
+            $599
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="more">
+    <a href="#">LOAD MORE</a>
+  </div>
+</section>
+
+<!-- second banner -->
+<section>
+  <div class="second-banner">
+    <div class="second-banner__content">
+      <div class="second-banner__content--details">
+        <div class="details details__title">
+          iPhone 6 Plus
+        </div>
+        <div class="details details__description">
+          Performance and design. Taken right to the edge.
+        </div>
+        <div class="details details__link">
+          <a href="$">SHOP NOW</a>
+        </div>
+      </div>
+      <div class="second-banner__content--image">
+        <img src="Images/iPhone-1.png" alt="" class="image">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- third banner -->
+<section>
+  <div class="third-banner">
+    <div class="third-banner__content">
+      <i class="fas fa-truck third-banner__content--icon"></i>
+      <div class="third-banner__content--title">
+        FREE SHIPPING
+      </div>
+      <div class="third-banner__content--text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor minim veniam, quis
+        nostrud reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+      </div>
+    </div>
+    <div class="third-banner__content">
+      <i class="fas fa-dollar-sign third-banner__content--icon"></i>
+      <div class="third-banner__content--title">
+        100% REFUND
+      </div>
+      <div class="third-banner__content--text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor minim veniam, quis
+        nostrud reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+      </div>
+    </div>
+    <div class="third-banner__content">
+      <i class="far fa-user-circle third-banner__content--icon"></i>
+      <div class="third-banner__content--title">
+        SUPPORT 24/7
+      </div>
+      <div class="third-banner__content--text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor minim veniam, quis
+        nostrud reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- latest news -->
+
+<section>
+  <div class="news-title">
+    <h3>LATEST NEWS</h3>
+  </div>
+  <div class="latest-news">
+    <div class="latest-news__content">
+      <div class="news">
+        <div class="news__image">
+          <img src="Images/smart-phone-card.png" alt="">
+        </div>
+        <div class="news__details">
+          <div class="news__details--date">
+            01 Jan, 2015
+          </div>
+          <div class="news__details--title">
+            Typesetting industry
+          </div>
+          <div class="news__details--text">
+            Lorem ipsum is simply dummy text of the printing and
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="latest-news__content">
+      <div class="news">
+        <div class="news__image">
+          <img src="Images/macbook.png" alt="">
+        </div>
+        <div class="news__details">
+          <div class="news__details--date">
+            01 Jan, 2015
+          </div>
+          <div class="news__details--title">
+            Typesetting industry
+          </div>
+          <div class="news__details--text">
+            Lorem ipsum is simply dummy text of the printing and
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="latest-news__content">
+      <div class="news">
+        <div class="news__image">
+          <img src="images/iphone1.png" alt="">
+        </div>
+        <div class="news__details">
+          <div class="news__details--date">
+            01 Jan, 2015
+          </div>
+          <div class="news__details--title">
+            Typesetting industry
+          </div>
+          <div class="news__details--text">
+            Lorem ipsum is simply dummy text of the printing and
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- featured product -->
+<section>
+  <div class="featured-title">
+    <h3>FEATURED PRODUCTS</h3>
+  </div>
+  <div class="featured-product">
+    <div class="featured-product__content">
+      <div class="featured-product__content--image">
+        <img src="images/beats.png" alt="" class="image">
+      </div>
+      <div class="featured-product__content--details">
+        <div class="title">
+          Beats Solo 2 On Ear Headphones - Black
+        </div>
+        <div class="rating">
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--gray"></i>
+        </div>
+        <div class="price">
+          <div class="price-discounted">
+            $499
+          </div>
+          <div class="price-orignal">
+            $599
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="featured-product__content">
+      <div class="featured-product__content--image">
+        <img src="images/tv.png" alt="" class="image">
+      </div>
+      <div class="featured-product__content--details">
+        <div class="title">
+          H-Squared tvTray
+        </div>
+        <div class="rating">
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--gray"></i>
+        </div>
+        <div class="price">
+          <div class="price-discounted">
+            $499
+          </div>
+          <div class="price-orignal">
+            $599
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="featured-product__content">
+      <div class="featured-product__content--image">
+        <img src="images/gauge.png" alt="" class="image">
+      </div>
+      <div class="featured-product__content--details">
+        <div class="title">
+          Netatmo Rain Gauge
+        </div>
+        <div class="rating">
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--yellow"></i>
+          <i class="fas fa-star card__rating--gray"></i>
+        </div>
+        <div class="price">
+          <div class="price-discounted">
+            $499
+          </div>
+          <div class="price-orignal">
+            $599
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- search -->
+<div class="page_search">
+
+  <input type="text" placeholder="Search query..." name="search" class="page_search_box">
+  <button type="submit" class="search_button">SEARCH</button>
+
 </div>
 
+<!-- footer -->
+<section class="footer">
+  <div class="footer upper">
+    <div class="footer_description">
+      <h3>RAKUTECH</h3>
+      <div class="footer_text">
+        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+          the industry's standard dummy text ever.Since the 1500s, when an unknown printer. </p>
+      </div>
+    </div>
+
+    <div class="social_media">
+
+      <h2> Follow Us </h2>
+      <p>Since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+
+      <div class="smLogo">
+        <div class="webLogo 1"><i class="fab fa-facebook-f facebook"></i></div>
+        <div class="webLogo 2"> <i class="fab fa-twitter twitter"></i></div>
+      </div>
+
+    </div>
+
+    <div class="contact">
+
+      <h2>Contact Us</h2>
+      <p>My Company , 4578 Marmora Road, Glasgow </p>
+      <p> D04 89GR </p>
+      <p>Call us now: 0123-456-789 </p>
+      <p>Email: support@whatever.com</p>
+
+    </div>
+  </div>
+
+  <div class="footer lower">
+
+    <ul class="footer_list information">
+
+      <h4>Information</h4>
+      <li>About Us</li>
+      <li>Information</li>
+      <li>Privacy Policy</li>
+      <li>Terms & Conditions</li>
+
+    </ul>
+
+    <ul class="footer_list service">
+
+      <h4>Services</h4>
+      <li>About Us</li>
+      <li>Information</li>
+      <li>Privacy Policy</li>
+      <li>Terms & Conditions</li>
+
+    </ul>
+
+    <ul class="footer_list extras">
+
+      <h4>Extras</h4>
+      <li>About Us</li>
+      <li>Information</li>
+      <li>Privacy Policy</li>
+      <li>Terms & Conditions</li>
+
+    </ul>
+
+    <ul class="footer_list account">
+
+      <h4>My Account</h4>
+      <li>About Us</li>
+      <li>Information</li>
+      <li>Privacy Policy</li>
+      <li>Terms & Conditions</li>
+
+    </ul>
+
+    <ul class="footer_list links">
+
+      <h4>Useful Links</h4>
+      <li>About Us</li>
+      <li>Information</li>
+      <li>Privacy Policy</li>
+      <li>Terms & Conditions</li>
+
+    </ul>
+
+    <ul class="footer_list offers">
+
+      <h4>Our Offers</h4>
+      <li>About Us</li>
+      <li>Information</li>
+      <li>Privacy Policy</li>
+      <li>Terms & Conditions</li>
+
+    </ul>
+
+  </div>
+
+  <div class="payment">
+
+    <p>© 2018 Ecommerce theme by www.bisenbaev.com</p>
+
+    <ul class="payment__option">
+
+      <li><img src="images/westernUnion.png" alt=""></li>
+      <li><img src="images/master.png" alt=""></li>
+      <li><img src="images/Paypal.png" alt=""></li>
+      <li><img src="images/visa.jpg" alt=""></li>
+
+    </ul>
+
+  </div>
+
+</section>
+
+
+
+
+<script src="script.js"></script>
 </body>
+
 </html>

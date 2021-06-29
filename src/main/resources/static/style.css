@@ -551,7 +551,7 @@
   height: 100%;
   width: 30%;
   background: #FF6875;
-  background-image: url(images/iPhone-1.png);
+  background-image: url(Images/iPhone-1.png);
   background-size: cover;
 }
 
@@ -1456,5 +1456,351 @@
   }
   .main-banner__content--image {
     width: 50%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  color: #22262A;
+  font-family: "Proxima Nova Rg";
+}
+
+.wallpaper {
+  background-image: url("Images/cover-img.jpg");
+  background-blend-mode: luminosity;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: cover;
+  opacity: 1;
+  height: 800px;
+  background: transparent -webkit-gradient(linear, left top, left bottom, from(#00000029), to(#000000)) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, #00000029 0%, #000000 100%) 0% 0% no-repeat padding-box;
+}
+
+.container__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto auto;
+}
+
+.container__left--title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 0;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+}
+
+.container__left--title:hover{
+  cursor: pointer;
+}
+
+.container__left--title .logo-white {
+  color: #FFFFFF;
+}
+
+.container__left--title .logo-red {
+  color: #FD2E2E;
+}
+
+.container__left--design {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+}
+
+.container__left--design .line {
+  height: 5px;
+  width: 50px;
+  background: #B2002D;
+}
+
+.container__left--text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 0;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  color: #FFFFFF;
+}
+
+.container__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto auto;
+  background: #FFFFFF;
+  border-radius: 6px;
+  width: 350px;
+}
+
+.container__right--title {
+  padding-top: 30px;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.container__right--apple {
+  padding: 15px 0;
+  width: 80%;
+  background: #000000;
+  margin: 20px 0;
+  border: none;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container__right--apple i {
+  font-size: 20px;
+  padding: 0 20px;
+  color: #FFFFFF;
+}
+
+.container__right--apple:hover {
+  cursor: pointer;
+  background: none;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.container__right--apple:hover i {
+  color: #000000;
+  font-weight: 600;
+}
+
+.container__right--facebook {
+  padding: 15px 0;
+  width: 80%;
+  border: 1px solid #3A5998;
+  background: #3A5998;
+  margin: 5px 0;
+  border-radius: 6px;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container__right--facebook i {
+  font-size: 20px;
+  padding: 0 20px;
+  color: #FFFFFF;
+}
+
+.container__right--facebook:hover {
+  cursor: pointer;
+  background: none;
+  color: #3A5998;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.container__right--facebook:hover i {
+  color: #3A5998;
+  font-weight: 600;
+}
+
+.container__right--or {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+}
+
+.container__right--or .line {
+  height: 1px;
+  width: 145px;
+  background: #000000;
+}
+
+.container__right form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+}
+
+.container__right form .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 10px 0;
+}
+
+.container__right form .email span {
+  font-size: 14px;
+}
+
+.container__right form .email input {
+  height: 40px;
+  border-radius: 6px;
+}
+
+.container__right form .email #email {
+  padding: 0 10px;
+}
+
+.container__right form .password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 10px 0;
+}
+
+.container__right form .password span {
+  font-size: 14px;
+}
+
+.container__right form .password input {
+  height: 40px;
+  border-radius: 6px;
+}
+
+.container__right form .password #password {
+  padding: 0 10px;
+}
+
+.container__right form .signin-btn {
+  padding: 15px 0;
+
+  background: #FD2E2E;
+  margin: 20px 0;
+  border: 1px solid #FD2E2E;
+  border-radius: 6px;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container__right form .signin-btn span {
+  color: #FFFFFF;
+}
+
+.container__right form .signin-btn:hover {
+  cursor: pointer;
+  background: none;
+}
+
+.container__right form .signin-btn:hover span {
+  color: #FD2E2E;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.container__right--terms {
+  font-size: 12px;
+  margin: 0 20px;
+}
+
+.container__right--signup {
+  font-size: 12px;
+  margin: 20px 20px;
+}
+
+.container__right--signup a {
+  color: #B2002D;
+}
+
+@media (max-width: 720px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container__left {
+    height: 0;
+    width: 0;
+    visibility: hidden;
   }
 }
