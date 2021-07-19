@@ -14,14 +14,11 @@ public class UserController {
     @Autowired
     private UserRepository repo;
 
-    @GetMapping("")
-    public String viewHomePage() {
-        return "index";
-    }
 
     @GetMapping("/register")
-    private String showSignUpForm(Model model) {
-        model.addAttribute("user", new User());
+    public String showSignUpForm(Model model) {
+        User user = new User();
+        model.addAttribute("user", user);
 
         return "signup_form";
     }
