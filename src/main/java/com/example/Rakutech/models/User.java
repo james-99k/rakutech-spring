@@ -3,18 +3,31 @@ package com.example.rakutech.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "users")
+@Table(name = "user", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true, length = 45)
+    @Column(name = "email")
     private String email;
 
-    @Column(nullable = false, length = 64)
+    @Column(name = "password")
     private String password;
+
+    @Column(name = "full_name")
+    private String fullName;
+
+    public User(Long id, String email, String password, String fullName) {
+        this.id = id;
+        this.email = email;
+        this.password = password;
+        this.fullName = fullName;
+    }
+
+    public User(String fullName, String email, String password) {
+    }
 
     public Long getId() {
         return id;
@@ -47,7 +60,4 @@ public class User {
     public void setFullName(String fullName) {
         this.fullName = fullName;
     }
-
-    @Column(name = "full_name", nullable = false, length = 50)
-    private String fullName;
 }
